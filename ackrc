@@ -1,0 +1,7 @@
+--type-set
+log=.log
+
+--nolog
+
+--pager
+less -RFSX

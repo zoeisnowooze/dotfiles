@@ -1,0 +1,19 @@
+command_timeout = 10000
+
+[docker_context]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
