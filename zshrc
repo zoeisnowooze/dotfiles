@@ -123,8 +123,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ssh="kitty +kitten ssh"
-alias icat="kitty icat --align=left"
+alias ssh="wezterm ssh"
+alias icat="wezterm imgcat"
 alias isvg="rsvg-convert | icat"
 alias idot='dot -Tsvg -Gbgcolor="transparent" -Ecolor="#f8f8f2ff" -Efontcolor="#f8f8f2ff" -Efontname="IBM Plex Mono Semibold" -Ncolor="#f8f8f2ff" -Nfontcolor="#f8f8f2ff" -Nfontname="IBM Plex Mono Semibold" | isvg'
 

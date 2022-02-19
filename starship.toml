@@ -3,17 +3,26 @@ command_timeout = 10000
 [docker_context]
 disabled = true
 
+[character]
+success_symbol = "✨"
+error_symbol = "💥"
+
 [gcloud]
 disabled = true
 
+[git_branch]
+symbol = ":"
+format = "[on](italic) [$symbol$branch]($style) "
+
+[git_state]
+cherry_pick = "[🍒 PICKING](bold red)"
+
 [git_status]
-conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🤷‍"
+format = '([$all_status$ahead_behind]($style) )'
+ahead = '[↑$count](green)'
+behind = '[↓$count](red)'
+diverged = '[↑$ahead_count](green) [↓$behind_count](red)'
+untracked = "?"
 stashed = "📦"
-modified = "📝"
-staged = '[++\($count\)](green)'
-renamed = "👅"
-deleted = "🗑"
+modified = '[📝\($count\)](yellow) '
+staged = '[+\($count\)](green)'
