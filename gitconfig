@@ -1,3 +1,5 @@
 [user]
 	name = Zoé Cassiopée Gauthier
 	email = hello@blorp.dev
+[init]
+	defaultBranch = main

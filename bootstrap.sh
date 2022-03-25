@@ -23,7 +23,7 @@ if ! (command -v dpkg-query >/dev/null 2>&1 && dpkg-query --list vim >/dev/null 
 fi
 
 if [ ! -d ~/.vim ]; then
-    git clone --quiet https://github.com/deuxpi/dotvim.git ~/.vim
+    git clone --quiet https://github.com/zoeisnowooze/dotvim.git ~/.vim
     ln -sf ~/.vim/vimrc ~/.vimrc
 else
     git -C ~/.vim pull --quiet
