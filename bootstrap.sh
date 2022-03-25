@@ -56,9 +56,7 @@ fi
 
 ### Wezterm
 
-if ! [ -x "$(command -v wezterm)" ]; then
-    curl -LO https://github.com/wez/wezterm/releases/download/20220101-133340-7edc5b5a/WezTerm-20220101-133340-7edc5b5a-Ubuntu18.04.AppImage
-    chmod +x WezTerm-20220101-133340-7edc5b5a-Ubuntu18.04.AppImage
-    mkdir -p ~/.local/bin
-    mv WezTerm-20220101-133340-7edc5b5a-Ubuntu18.04.AppImage ~/.local/bin/wezterm
-fi
+curl -LO https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-Ubuntu18.04.AppImage
+chmod +x WezTerm-nightly-Ubuntu18.04.AppImage
+mkdir -p ~/.local/bin
+mv WezTerm-nightly-Ubuntu18.04.AppImage ~/.local/bin/wezterm
