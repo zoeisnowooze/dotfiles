@@ -6,8 +6,7 @@ fi
 fpath+=~/.zfunc
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/share/yabridge:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -31,14 +30,13 @@ ZSH_THEME="witchhazelhypercolor"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -53,6 +51,9 @@ ZSH_THEME="witchhazelhypercolor"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -123,8 +124,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ssh="wezterm ssh"
-alias icat="wezterm imgcat"
+case $TERM in
+    xterm-kitty)
+        # alias ssh="kitty +kitten ssh"
+        alias icat="kitty icat --align=left"
+        ;;
+    *)
+        alias ssh="wezterm ssh"
+        alias icat="wezterm imgcat"
+        ;;
+esac
 alias isvg="rsvg-convert | icat"
 alias idot='dot -Tsvg -Gbgcolor="transparent" -Ecolor="#f8f8f2ff" -Efontcolor="#f8f8f2ff" -Efontname="IBM Plex Mono Semibold" -Ncolor="#f8f8f2ff" -Nfontcolor="#f8f8f2ff" -Nfontname="IBM Plex Mono Semibold" | isvg'
 

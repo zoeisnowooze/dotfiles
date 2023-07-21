@@ -17,4 +17,5 @@ return {
   }),
   initial_cols = 140,
   initial_rows = 50,
+  enable_wayland = false,
 }
