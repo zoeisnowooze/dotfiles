@@ -1,5 +1,25 @@
+[init]
+	defaultBranch = main
+
+[pull]
+  ff = only
+
 [user]
 	name = Zoé Cassiopée Gauthier
 	email = hello@blorp.dev
-[init]
-	defaultBranch = main
+
+[core]
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  syntax-theme = witchhazelhypercolor
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default

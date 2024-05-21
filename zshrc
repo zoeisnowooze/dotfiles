@@ -140,3 +140,5 @@ alias idot='dot -Tsvg -Gbgcolor="transparent" -Ecolor="#f8f8f2ff" -Efontcolor="#
 if which starship >/dev/null 2>&1; then
     eval "$(starship init zsh)"
 fi
+
+eval "$(~/.rbenv/bin/rbenv init - zsh)"

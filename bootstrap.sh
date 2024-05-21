@@ -38,10 +38,10 @@ if [ ! -d ~/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 fi
 if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
 fi
 if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
 fi
 mkdir -p ~/.oh-my-zsh/custom/themes
 ln -sf "$DOTFILES/themes/witchhazelhypercolor.zsh-theme" ~/.oh-my-zsh/custom/themes/witchhazelhypercolor.zsh-theme
@@ -52,11 +52,3 @@ ln -sf "$DOTFILES/themes/witchhazelhypercolor.zsh-theme" ~/.oh-my-zsh/custom/the
 if ! [ -x "$(command -v starship)" ]; then
     sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
 fi
-
-
-### Wezterm
-
-curl -LO https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-Ubuntu18.04.AppImage
-chmod +x WezTerm-nightly-Ubuntu18.04.AppImage
-mkdir -p ~/.local/bin
-mv WezTerm-nightly-Ubuntu18.04.AppImage ~/.local/bin/wezterm
