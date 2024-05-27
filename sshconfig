@@ -1,0 +1,11 @@
+Host *
+  SetEnv TERM=xterm-256color
+
+Host unifi.dangitzoe.wtf 192.168.1.11
+    User root
+    HostKeyAlgorithms +ssh-rsa
+
+Host git.blorp.dev
+    User git
+    IdentityFile /home/zo/.ssh/id_rsa
+    Port 222
